@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> SPEEDO TYPER </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="difficulty-popup">
+  <h2>SELECT DIFFICULTY</h2>
+  <button data-level="easy">Easy</button>
+  <button data-level="medium">Medium</button>
+  <button data-level="hard">Hard</button>
+</div>
+<div id="game-info">
+    <div id="game-controls">
+  <button id="restart-game">RESTART</button>
+</div>
+
+  <span id="timer"> TIME: <span >30</span>s</span> |
+  <span id="score">SCORE: <span >0</span></span> |
+  <span  id="mistakes">MISTAKES: <span>0</span></span>
+
+</div>
+<div id="message"></div>
+
+  <div id="sentence-container"></div>
+<input type="text" id="user-input" placeholder="Type here..." />
+<div class="image">
+<img src="keyboard3.jpg" alt="Keyboard" id="keyboard-img" width="900" height="325">
+<div class="key" id="KeyA" data-key="a" style="top: 385px; left: 89px;"></div>
+<div class="key" id="Keys" data-key="s" style="top: 385px; left: 125px;"></div>
+<div class="key" id="Keyf" data-key="f" style="top: 385px; left: 160px;"></div>
+<div class="key" id="Keyg" data-key="g" style="top: 385px; left: 197px;"></div>
+<div class="key" id="KeyA" data-key="h" style="top: 385px; left: 235px;"></div>
+<div class="key" id="KeyA" data-key="j" style="top: 385px; left: 270px;"></div>
+<div class="key" id="KeyA" data-key="k" style="top: 385px; left: 307px;"></div>
+<div class="key" id="KeyA" data-key="l" style="top: 386px; left: 345px;"></div>
+<div class="key" id="KeyA" data-key=";" style="top: 385px; left: 380px;"></div>
+<div class="key" id="KeyA" data-key="'" style="top: 385px; left: 420px;"></div>
+<div class="key" id="KeyA" data-key="z" style="top: 428px; left: 103px;"></div>
+<div class="key" id="KeyA" data-key="x" style="top: 428px; left: 140px;"></div>
+<div class="key" id="KeyA" data-key="c" style="top: 428px; left: 180px;"></div>
+<div class="key" id="KeyA" data-key="b" style="top: 428px; left: 215px;"></div>
+<div class="key" id="KeyA" data-key="n" style="top: 428px; left: 250px;"></div>
+<div class="key" id="KeyA" data-key="m" style="top: 428px; left: 290px;"></div>
+<div class="key" id="KeyA" data-key=" " style="top: 428px; left: 290px;"></div>
+
+
+
+
+
+
+<div class="keyspaces" id="Keyspace" data-key=" " style="top: 478px; left: 125px;"></div>
+</div>
+  <script type="module" src="mainjs.js"></script>
+</body>
+</html>

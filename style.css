@@ -1,0 +1,209 @@
+/* Container for the sentence */
+*{
+    color: black;
+}
+#sentence-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;               
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #130707; 
+  border-radius: 8px;
+  background-color: #0f0909;
+  min-height: 60px;        
+}
+
+/* WORD BOX */
+.word-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: grey;  
+  color: white;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Highlight current word */
+.word-box.active {
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px #00f;
+}
+
+/* Correct word */
+.word-box.correct {
+  background-color: green;
+}
+
+/* Wrong word */
+.word-box.wrong {
+  background-color: red;
+  transform: translateY(2px); 
+}
+
+/* Input box */
+#user-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+#user-input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
+
+/* Difficulty popup */
+/* Glassy, minimalist difficulty popup */
+/*DONE WITH AI */
+#difficulty-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  backdrop-filter: blur(8px);          /* glassy blur effect */
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Difficulty buttons */
+#difficulty-popup button {
+  display: inline-block;
+  min-width: 100px;
+  padding: 12px 20px;
+  margin: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect: slightly brighten and lift */
+#difficulty-popup button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Game info container */
+#game-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Brick-style counters */
+#timer, #score, #mistakes {
+  display: inline-block;
+  min-width: 60px;
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+#restart-game{
+  display: inline-block;
+  min-width: 60px;
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+/* Optional: small pop effect when updated */
+#timer.update, #score.update, #mistakes.update {
+  transform: scale(1.2);
+  animation: pop 0.2s forwards;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Message display */
+#message {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+}
+.image{
+    .container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 50vh;           /* optional */
+}
+
+}
+#keyboard-container {
+  position: relative;
+  display: inline-block;
+}
+
+#keyboard-img {
+  display: block;
+  width: 600px; /* adjust as needed */
+}
+
+.key {
+  position: absolute;
+  width: 40px;   /* size of the key */
+  height: 40px;
+  border-radius: 6px;
+  background-color: rgba(255,255,255,0); /* invisible overlay */
+  pointer-events: none; /* let clicks go through */
+  transition: box-shadow 0.1s;
+}
+#keyspace{
+  position: absolute;
+  width: 90px;   /* size of the key */
+  height: 40px;
+  border-radius: 6px;
+  background-color: rgba(255,255,255,0); /* invisible overlay */
+  pointer-events: none; /* let clicks go through */
+  transition: box-shadow 0.1s;
+}
+
+/* glowing effect when pressed */
+.key.active {
+  box-shadow: 0 0 15px 5px yellow;
+  background-color: rgba(255,255,0,0.2);
+}
+
